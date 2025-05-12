@@ -6,7 +6,7 @@
 
 package Patterns;
 
-import java.util.Scanner;;
+import java.util.Scanner;
 
 public class Pt7 {
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class Pt7 {
                 }
                 // ------------
             }
-
+            
             if(i <= n/2) {
                 sp--;
                 st += 2;

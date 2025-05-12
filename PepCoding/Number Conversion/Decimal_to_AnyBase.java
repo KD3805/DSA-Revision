@@ -1,5 +1,5 @@
 // Decimal -> Any other: 
-//      - Divide by Base
+//      - Divide by Base    
 //      - Multiply with powers of 10
 
 import java.util.Scanner;

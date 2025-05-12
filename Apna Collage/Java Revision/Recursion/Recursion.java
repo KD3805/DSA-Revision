@@ -114,6 +114,7 @@ public class Recursion {
 
     //==============================================================
 
+    // A subsequence of a string is a new string formed by deleting zero or more characters from the original string, without changing the order of the remaining characters.
     // In subsequences, all the characters has freedom to be or not to be in new string
     public static void subsequences(String str, int i, String newString) {
         // time complexity = O(2^n)

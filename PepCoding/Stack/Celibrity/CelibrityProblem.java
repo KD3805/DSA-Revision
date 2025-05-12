@@ -1,6 +1,7 @@
 // Celibrity:
 // - known by everybody
 // - knows nobody
+// - if i knows j ==> 1 else 0
 
 package Stack.Celibrity;
 

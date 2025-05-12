@@ -10,6 +10,8 @@ public class MyPreviousGreaterElement {
         int[] pge = new int[a.length]; // pge - previous greater element
 
         Stack<Integer> st = new Stack<>();
+        st.push(a[0]); // Push the first element of the array into the stack
+        pge[0] = -1; // The first element has no previous greater element
 
         for(int i = 0; i < a.length; i++) {
             while (st.size() > 0 && a[i] > st.peek()) {

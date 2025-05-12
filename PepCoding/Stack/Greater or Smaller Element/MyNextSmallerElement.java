@@ -10,9 +10,12 @@ public class MyNextSmallerElement {
         int[] nse = new int[a.length]; // nse - next smaller element
 
         Stack<Integer> st = new Stack<>();
+        st.push(a[a.length - 1]); // Push the last element of the array into the stack
+        nse[a.length - 1] = -1; // The last element has no next smaller element
 
         for(int i = a.length - 1; i >= 0; i--) {
             while (!st.isEmpty() && a[i] < a[st.peek()]) {
+                // get RID of larger element from stack
                 st.pop(); // Remove elements from the stack that are not smaller than the current element
             }
             if(!st.isEmpty()) {

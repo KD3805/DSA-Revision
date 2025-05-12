@@ -50,9 +50,13 @@ public class AdvanceRecursion {
     Conditions - move either downwards or right */
 
     public static int countPaths(int i, int j, int n, int m) {
+        // time complexity - O(2^(n+m)); where n+m is the total steps
+        
+        // boundary condition
         if (i == n || j == m) {
             return 0;
         }
+        // reached destination
         if (i == n - 1 || j == m - 1) {
             return 1;
         }
@@ -102,6 +106,9 @@ public class AdvanceRecursion {
         // pairs
         int way2 = (n-1)*callGuests(n-2);
 
+        // f(n) = 1 * f(n-1) + (n-1) * f(n-2)
+        // It just says: "Person n can either come alone (and leave n-1), or pair with any of the n-1 others (and leave n-2)."
+
         return way1 + way2;
     }
 
@@ -124,11 +131,13 @@ public class AdvanceRecursion {
             return;
         }
 
-        //add thase
+        // add thase
+        // current number ne subset ma add karvo
         subset.add(n);
         findSubsets(n-1, subset);
 
-        //add nai thay
+        // add nai thay
+        // backtracking ma last element ne remove karvo pade
         subset.remove(subset.size()-1);
         findSubsets(n-1, subset);
     }
